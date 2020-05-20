@@ -4,17 +4,21 @@ const app = express()
 const port = 3000
 
 
-// GET route to load to do list items(/api/items)
-// should return an array of items with a text: property, an isDone property, and a uniqueID property
 
-let items = []
-//get route to get all items
-app.get('/items', (req, res) =>{
-  items.push({ items })
-}
+let items = ['shop', 'clean']
 
-//put route to update the item
+//get route to get all items, return an array 
+app.get('/api/items', (req, res) => {
+  res.send(200, items)
+})
 
-//delete route to delte the item
+app.put('/api/createItem', (req, res) =>{
+  
+  let newItem = req.body
+
+  //create a way to check the ID has not been used (create unique ID)
+  
+  res.send(200, items)
+})
 
 app.listen(port, () => console.log(`Example app listening at http://localhost:${port}`))
