@@ -15,7 +15,9 @@ let testItem = {
 }
 
 app.put('modifyItem',(req,res) => { //modify an existing item
-  req.
+  myNewItem = req.body //this req should pass in an item object with text, isDone, and uniqueID properties
+  let indexToReplacearrayOfItems.findIndex(item => item.uniqueID == myNewItem.uniqueID)
+  arrayOfItems.splice(
 })
 app.delete('/api/items',(req,res) => { //delete an item
 
