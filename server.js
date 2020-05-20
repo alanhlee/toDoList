@@ -16,7 +16,7 @@ let testItem = {
   uniqueID: 666
 }
 
-app.put('/modifyItem',(req,res) => { //modify an existing item
+app.put('/api/modifyItem',(req,res) => { //modify an existing item
   let myNewItem = req.body //this req should pass in an item object with text, isDone, and uniqueID properties
   let indexToReplace = arrayOfItems.findIndex(item => item.uniqueID == myNewItem.uniqueID)
   arrayOfItems.splice(indexToReplace, 1, myNewItem)
