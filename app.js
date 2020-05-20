@@ -4,7 +4,7 @@
 
 axios.get('/api/items')
   .then(response => {
-    let foods = response.data.foods
+    let items = response.data.items
 
     items.forEach(items => {
       //need li in todo

@@ -22,6 +22,7 @@ app.put('/api/createItem', (req, res) =>{
     if items[i].id === id {
       console.log(true)
     } else {
+      items[i].id !== id
       items.push[]
     }
   }
